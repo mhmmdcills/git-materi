@@ -112,8 +112,8 @@
                   <td><?= $row['name'] ?></td>
                   <td><?= $row['email'] ?></td>
                   <td>
-                    <a href="edit.php?id=<?= $row['id'] ?>">Edit</a>
-                    <a href="delete.php?id=<?= $row['id'] ?>">Delete</a>
+                    <a href="edit.php?id=<?= $row['id']  ?> "class="btn btn-primary btn-xs">Edit</a>
+                    <a href="delete.php?id=<?= $row['id'] ?>"class="btn btn-danger btn-xs" onclick=' javascript:return confirm("Yakin mau hapus data ini?") '>Delete</a>
 
                   </td>
                 </tr>

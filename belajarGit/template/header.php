@@ -23,7 +23,7 @@
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="template/adminlte2/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      <img src="https://cdn.keepo.me/images/post/lists/2019/09/02/main-list-image-52d0fe65-93aa-4631-83f1-731d129eb0fd-12.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
@@ -95,17 +95,17 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="template/adminlte2/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Dobleh Palupi</span>
+              <img src="https://initu.id/wp-content/uploads/2018/11/Biografi-Singkat-Najwa-Shihab-450x300.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Najwa Shihab</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="template/adminlte2/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="https://initu.id/wp-content/uploads/2018/11/Biografi-Singkat-Najwa-Shihab-450x300.jpg">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  Najwa Shihab
+                  <small>Member since Nov. 2033</small>
                 </p>
               </li>
               <!-- Menu Body -->

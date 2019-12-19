@@ -75,43 +75,40 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Edit User
-        <small>edit user account</small>
+        Post 
+        <small>Post your.....</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="index.php"><i class="fa fa-rocket"></i>Home</a></li>
         <li class="active"><a href="index.php"><i class="fa fa-user"></i>User</a></li>
-        <li class="active"><i class="fa fa-plus"></i>Edit User</li>
+        <li class="active"><i class="fa fa-plus"></i>Tambah User</li>
       </ol> 
     </section>
 
     <!-- Main content -->
     <section class="content">
-            <h3>Edit here</h3>
+            <h3>Post some.....</h3>
       <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-            <form role="form" method="post" action="proses_edit.php">
-    <?php
-    include '../koneksi.php';
-    $ID     = $_GET['id'];
-    $sql    = "select * from users where id=$ID";
-    $hasil  = mysqli_query($connect,$sql);
-    $row    = mysqli_fetch_assoc($hasil);
-    ?>
+            <form role="form" method="post" action="proses_tambah.php">
               <div class="box-body">
-                <input type="hidden" name="id" value="<?= $ID ?>">
                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter Name" value="<?php echo $row['name'];?>">
+                  <label for="name">Author</label>
+                  <input type="text" name="author" class="form-control" id="author" placeholder="Enter Author">
                 </div>
                 <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" value=" <?php echo $row['email'];?>">
+                  <label for="title">Title</label>
+                  <input type="text" name="title" class="form-control" id="title" placeholder="Enter title">
                 </div>
                 <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                  <label for="content">content</label>
+                  <textarea name="content" class="form-control" id="content" placeholder="content"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="status">status</label> <br>
+                  <label><br><input type="radio" name="status"  id="status">Draft</label> <br>
+                  <label><input type="radio" name="status"  id="status">Publish</label>
                 </div>
                <!-- <div class="form-group">
                   <label for="exampleInputFile">File input</label>
@@ -119,11 +116,7 @@
 
                   <p class="help-block">Example block-level help text here.</p>
                 </div> -->
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox"> Check me out
-                  </label>
-                </div>
+
               </div>
               <!-- /.box-body -->
 

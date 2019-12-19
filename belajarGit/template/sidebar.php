@@ -4,10 +4,10 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="template/adminlte2/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="https://initu.id/wp-content/uploads/2018/11/Biografi-Singkat-Najwa-Shihab-450x300.jpg" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Dobleh Palupi</p>
+          <p>Najwa Shihab</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -36,7 +36,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-plus"></i> Add Post</a></li>
+            <li><a href="http://localhost/clone/belajarGit/post/tambah.php"><i class="fa fa-plus"></i> Add Post</a></li>
             <li><a href="http://localhost/clone/belajarGit/post/"><i class="fa  fa-rocket"></i>Home Page</a></li>
           </ul>
         </li>

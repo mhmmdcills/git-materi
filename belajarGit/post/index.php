@@ -4,7 +4,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Blank Page</title>
+  <title> | POST HOME |</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -76,10 +76,10 @@
     <section class="content-header">
       <h1>
         POST
-        <small>Make CMS project</small>
+        <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li class="active"><i class="fa fa-user"></i>Main Page</li>
+        <li class="active"><i class="fa fa-user"></i>Home Page</li>
       </ol>
     </section>
 
@@ -89,69 +89,44 @@
       <!-- Default box -->
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Bordered Table</h3>
+             <a href="create.php" class="btn btn-sm btn-primary"><i class="fa fa-cicle plus"></i>Create</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table class="table table-bordered">
                 <tr>
-                  <th style="width: 10px">#</th>
-                  <th>Task</th>
-                  <th>Progress</th>
-                  <th style="width: 40px">Label</th>
+                  <th style="width:10px">No</th>
+                  <th>author</th>
+                  <th>title</th>
+                  <th>content</th>
+                  <th>status</th>
                 </tr>
+                <?php
+                  include '../koneksi.php';
+                  $no = 1;
+                  $sql = "SELECT * FROM post";
+                  $result = mysqli_query($connect, $sql);
+                  if (mysqli_num_rows($result)){
+                    while ($row=mysqli_fetch_assoc($result)){?>
                 <tr>
-                  <td>1.</td>
-                  <td>Update software</td>
+                  <td><?= $no++ ?></td>
+                  <td><?= $row['name'] ?></td>
+                  <td><?= $row['email'] ?></td>
                   <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                    </div>
+                    <a href="edit.php?id=<?= $row['id']  ?> "class="btn btn-primary btn-xs">Edit</a>
+                    <a href="delete.php?id=<?= $row['id'] ?>"class="btn btn-danger btn-xs" onclick=' javascript:return confirm("Yakin mau hapus data ini?") '>Delete</a>
+
                   </td>
-                  <td><span class="badge bg-red">55%</span></td>
                 </tr>
-                <tr>
-                  <td>2.</td>
-                  <td>Clean database</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-yellow">70%</span></td>
-                </tr>
-                <tr>
-                  <td>3.</td>
-                  <td>Cron job running</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-light-blue">30%</span></td>
-                </tr>
-                <tr>
-                  <td>4.</td>
-                  <td>Fix and squish bugs</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-green">90%</span></td>
-                </tr>
+                <?php 
+                  }
+                  }
+                ?>
+
               </table>
             </div>
             <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <ul class="pagination pagination-sm no-margin pull-right">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">&raquo;</a></li>
-              </ul>
-            </div>
+
           </div>
       <!-- /.box -->
 
